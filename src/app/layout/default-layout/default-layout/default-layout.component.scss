@@ -1,0 +1,11 @@
+.bg-custom-color {
+  background-color: #10172b; // Color inicial del navbar (puedes cambiarlo)
+  transition: background-color 0.3s ease-in;
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+  transition: background-color 0.3s ease-in-out;
+  color: black;
+}
