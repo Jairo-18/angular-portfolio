@@ -1,35 +1,121 @@
 <nav class="nav">
   <article
-    class="hidden md:flex content-between w-full md:w-[90%] h-full backdrop-blur-md bg-[#050707]/70 rounded-lg px-[2vw]"
+    class="hidden md:flex content-between w-full h-full rounded-lg px-[2vw]"
   >
-    <section class="w-[50%]">
-      <!-- <div class="flex w-full justify-start items-center">
-        <img src="../../../../assets/images/LOGO-IPUC.svg" alt="" />
-      </div> -->
-    </section>
-    <section class="flex w-[50%] justify-center items-center">
-      <div class="flex w-full content-between justify-end text-center">
+    <section class="flex w-full justify-start items-center">
+      <div
+        class="flex w-full content-between justify-start text-center gap-x-3"
+      >
         <a
           routerLink="/home"
-          type="button"
-          class="py-[15px] w-[25%] hover:bg-blue-500/50 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
-          >Work</a
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
         >
+          <mat-icon>person</mat-icon>
+          <span class="min-w-max">Sobre mí</span>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+
         <a
-          routerLink=""
-          class="py-[15px] w-[25%] hover:bg-blue-500/50 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
-          >Education</a
+          routerLink="/skills"
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
         >
+          <mat-icon>build</mat-icon>
+          <span class="min-w-max"> Habilidades</span>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+
         <a
-          routerLink=""
-          class="py-[15px] w-[25%] hover:bg-blue-500/50 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
-          >About</a
+          routerLink="/projects"
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
         >
+          <mat-icon>folder</mat-icon>
+          <span class="min-w-max">Proyectos</span>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+
         <a
-          routerLink=""
-          class="py-[15px] w-[25%] hover:bg-blue-500/50 rounded-lg transition-all duration-300 ease-in-out transform hover:scale-105"
-          >Contact</a
+          routerLink="/experience"
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
         >
+          <mat-icon>work</mat-icon>
+          <span class="min-w-max">Experiencia</span>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+
+        <a
+          routerLink="/contact"
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
+        >
+          <mat-icon>mail</mat-icon>
+          <span class="min-w-max">Contacto</span>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="flex w-full justify-end items-center">
+      <div class="flex w-full content-between justify-end text-center gap-x-3">
+        <a
+          href="https://github.com/Jairo-18"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
+        >
+          <!-- <span class="min-w-max">GitHub</span> -->
+          <i class="fa-brands fa-github"></i>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/jhon-jairo-legarda-erazo-ba02422a4/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
+        >
+          <!-- <span class="min-w-max">Linkedin</span> -->
+          <i class="fa-brands fa-linkedin"></i>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+        <a
+          href="../../../../assets/files/CV-15-06.pdf"
+          download="CV_Jhon_Legarda.pdf"
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
+        >
+          <!-- <span class="min-w-max">CV</span> -->
+          <i class="fa-solid fa-address-card"></i>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
       </div>
     </section>
   </article>
@@ -46,23 +132,23 @@
         <mat-icon>menu</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/home">
           <mat-icon>person</mat-icon>
           <span>Sobre mí</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/skills">
           <mat-icon>build</mat-icon>
           <span>Habilidades</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/projects">
           <mat-icon>folder</mat-icon>
           <span>Proyectos</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/experience">
           <mat-icon>work</mat-icon>
           <span>Experiencia</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/contact">
           <mat-icon>mail</mat-icon>
           <span>Contacto</span>
         </button>

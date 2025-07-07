@@ -1,3 +1,89 @@
-@for (item of items; track $index) {
-<p>Probando layout {{ $index + 1 }}</p>
-}
+<article class="brand-content-center">
+  <section
+    class="flex flex-col md:flex-row items-center justify-between gap-8 w-full"
+  >
+    <div
+      class="flex flex-col md:hidden w-[90%] md:w-[50%] justify-center items-center px-0 md:px-10"
+    >
+      <img
+        src="../../../../assets/images/FB_IMG_1686635148240.jpg"
+        alt="Foto de Jhon Jairo Legarda"
+        class="w-40 md:w-72 h-40 md:h-72 object-cover rounded-full border-2 border-[#050707] shadow-lg"
+      />
+    </div>
+    <!-- Descripción -->
+    <div
+      class="flex flex-col w-[90%] md:w-[60%] justify-start items-start px-0 md:px-10 text-left gap-4"
+    >
+      <span class="text-2xl md:text-5xl font-bold">
+        Hola, soy Jhon Jairo Legarda
+      </span>
+      <span class="text-xl md:text-4xl font-normal">
+        Desarrollador Full Stack
+      </span>
+      <p class="text-sm md:text-lg leading-relaxed">
+        Soy desarrollador full stack especializado en la creación de
+        aplicaciones web modernas, eficientes y escalables. Cuento con más de 1
+        año de experiencia construyendo soluciones completas desde el frontend
+        hasta el backend.
+      </p>
+      <p class="text-sm md:text-lg leading-relaxed">
+        Trabajo principalmente con JavaScript, TypeScript, Angular, NestJS,
+        TailwindCSS y PostgreSQL, aunque no me limito a estas tecnologías. Me
+        adapto con facilidad a nuevas herramientas y frameworks según lo
+        requiera el proyecto, priorizando siempre buenas prácticas, rendimiento
+        y calidad del código.
+      </p>
+      <p class="text-sm md:text-lg leading-relaxed">
+        Me apasiona aprender, optimizar procesos y construir productos digitales
+        que realmente marquen la diferencia.
+      </p>
+
+      <div class="flex content-between gap-x-3">
+        <a
+          routerLink="/contact"
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
+        >
+          <mat-icon>mail</mat-icon>
+          <span class="min-w-max">Contáctame</span>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+        <a
+          routerLink="/projects"
+          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-transparent border border-neutral-950 px-6 font-medium text-neutral-200 transition hover:scale-110"
+        >
+          <span class="min-w-max">Proyectos</span>
+          <div
+            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+          >
+            <div class="relative h-full w-8 bg-white/20"></div>
+          </div>
+        </a>
+      </div>
+      <div class="flex content-between gap-x-3 text-xs md:text-lg">
+        <div class="flex gap-x-2">
+          <mat-icon>location_on</mat-icon><span>Putumayo, Colombia</span>
+        </div>
+        <div class="flex gap-x-2">
+          <i class="fa-solid fa-globe center-icon"></i
+          ><span>Disponible para remoto</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imagen personal -->
+    <div
+      class="hidden md:flex flex-col w-[90%] md:w-[40%] justify-center items-center px-0 md:px-10"
+    >
+      <img
+        src="../../../../assets/images/FB_IMG_1686635148240.jpg"
+        alt="Foto de Jhon Jairo Legarda"
+        class="w-40 md:w-72 h-40 md:h-72 object-cover rounded-full border-2 border-[#050707] shadow-lg"
+      />
+    </div>
+  </section>
+</article>

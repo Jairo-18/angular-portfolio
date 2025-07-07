@@ -23,11 +23,19 @@
 }
 
 .brand-content-center {
-  min-height: 100dvh;
+  min-height: 80dvh;
+  max-height: 100%;
   width: 100%;
   display: flex;
+  padding-block: 0;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 768px) {
+    min-height: 100dvh;
+    padding-block: 32px;
+  }
 }
 
 .nav {

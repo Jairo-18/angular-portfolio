@@ -15,14 +15,28 @@ export const publicRoutes: Routes = [
           import('./pages/skills/skills.component').then(
             (m) => m.SkillsComponent
           )
+      },
+      {
+        path: 'projects',
+        loadComponent: () =>
+          import('./pages/projects/projects.component').then(
+            (m) => m.ProjectsComponent
+          )
+      },
+      {
+        path: 'experience',
+        loadComponent: () =>
+          import('./pages/experience/experience.component').then(
+            (m) => m.ExperienceComponent
+          )
+      },
+      {
+        path: 'contact',
+        loadComponent: () =>
+          import('./pages/contact/contact.component').then(
+            (m) => m.ContactComponent
+          )
       }
-      // {
-      //   path: 'register',
-      //   loadComponent: () =>
-      //     import('./pages/register/register.component').then(
-      //       (m) => m.RegisterComponent
-      //     )
-      // }
     ]
   }
 ];

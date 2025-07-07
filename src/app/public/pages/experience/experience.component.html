@@ -1,1 +1,8 @@
-<p>experience works!</p>
+<!-- <article class="brand-content-center">
+  <section class="flex fleX-col"></section>
+</article> -->
+@for (item of items; track $index) {
+<div class="flex flex-col">
+  <p>Probando layout {{ $index + 1 }}</p>
+</div>
+}
