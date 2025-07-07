@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   selector: 'app-home',
   imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrl: './home.component.scss'
 })
-export class HomeComponent {}
+export class HomeComponent {
+  items = Array.from({ length: 100 });
+}

@@ -342,3 +342,55 @@ mat-form-field {
     }
   }
 }
+
+/* Estilos para mat-menu */
+.mat-mdc-menu-panel {
+  background-color: $surface-color !important;
+  border-radius: $brand-border-radius-sm !important;
+  box-shadow: $box-shadow !important;
+  padding: 4px 0 !important;
+  min-width: 200px !important;
+}
+
+.mat-mdc-menu-content {
+  margin: 0;
+  padding: 0 !important;
+  outline: 0;
+}
+
+.mat-mdc-menu-item {
+  font-size: $font-size-medium !important;
+  padding-block: $spacing-medium-small !important;
+  padding-inline: $spacing-medium !important;
+  color: $text-black !important;
+  transition: background-color $transition-fast !important;
+  border-bottom: $global-border !important;
+  display: flex;
+  align-items: center;
+  gap: $spacing-small;
+
+  &:hover {
+    background-color: $primary-hover-color !important;
+    color: $text-on-primary !important;
+  }
+
+  &:disabled {
+    color: $text-disabled !important;
+  }
+
+  .mat-icon {
+    font-size: $brand-mat-menu-item-size !important;
+    margin-right: $spacing-small !important;
+  }
+
+  &:last-child {
+    border-bottom: none !important;
+  }
+
+  &.active {
+    .mat-mdc-menu-item-text {
+      font-size: $brand-mat-menu-active-item-size !important;
+      font-weight: 600 !important;
+    }
+  }
+}

@@ -6,8 +6,23 @@ export const publicRoutes: Routes = [
     children: [
       {
         path: 'home',
-        loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent),
+        loadComponent: () =>
+          import('./pages/home/home.component').then((m) => m.HomeComponent)
       },
-    ],
-  },
+      {
+        path: 'skills',
+        loadComponent: () =>
+          import('./pages/skills/skills.component').then(
+            (m) => m.SkillsComponent
+          )
+      }
+      // {
+      //   path: 'register',
+      //   loadComponent: () =>
+      //     import('./pages/register/register.component').then(
+      //       (m) => m.RegisterComponent
+      //     )
+      // }
+    ]
+  }
 ];

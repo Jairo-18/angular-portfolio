@@ -4,45 +4,22 @@
 
 .app-container {
   transition: margin-left 0.3s ease, width 0.3s ease;
-  overflow-y: auto;
-  overflow-x: hidden;
   width: 100%;
   display: flex;
+  flex-direction: column;
   height: 100dvh;
-
-  // Solo en desktop ajustar el ancho según el sidebar
-  @media (min-width: 769px) {
-    width: calc(100vw - var(--sidebar-width));
-    margin-left: var(--sidebar-width);
-  }
-
-  @media (max-width: 768px) {
-    width: 100vw;
-    margin-left: 0;
-  }
 }
 
 .main {
+  display: flex;
+  margin-top: $heigth-nav-bar-destok;
+  flex-direction: column;
   height: 100%;
   width: 100vw;
-  overflow-y: auto;
-  overflow-x: hidden;
 
-  &.mobile-margin-left {
-    margin-left: 75px;
-    height: 100%;
-
-    @media (min-width: 768px) {
-      margin-left: 0; // En desktop quita el margen
-    }
+  @media (max-width: 768px) {
+    margin-top: $heigth-nav-bar-mobile;
   }
-  // @media (max-width: 768px) {
-  //   margin-left: 75px;
-  // }
-}
-
-.brand-side-bar {
-  background-color: #06a606;
 }
 
 .brand-content-center {
@@ -51,6 +28,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $heigth-nav-bar-destok;
+  padding-block: 7px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    padding-block: 0;
+    height: $heigth-nav-bar-mobile;
+  }
+}
+
+.footer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $heigth-footer;
+  display: flex;
+  justify-content: center;
 }
 
 .font-noto-serif {

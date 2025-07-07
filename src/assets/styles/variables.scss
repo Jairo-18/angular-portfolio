@@ -6,24 +6,26 @@ $brand-red-color: #d61a44;
 $brand-red-color-10: #a90429;
 
 // Paleta de colores base
-$light-green-50: #f0f9f1; // Tonalidad muy clara
-$light-green-100: #d3e9d2; // Tonalidad clara
-$light-green-200: #a9d59f; // Tonalidad suave
-$light-green-300: #7cb86d; // Tonalidad intermedia
-$light-green-400: #57a545; // Tonalidad más fuerte
-$light-green-500: #06a606; // Color base (principal)
-$light-green-600: #069905; // Un poco más oscuro
-$light-green-700: #058b04; // Más oscuro
-$light-green-800: #047d03; // Más oscuro
-$light-green-900: #036e02; // Más oscuro
-$light-green-A100: #8cd38c; // Variante en tonos pasteles
-$light-green-A200: #6ab76a; // Variante más fuerte
-$light-green-A400: #3d9f3d; // Variante más saturada
-$light-green-A700: #238a23;
-$deep-green-dark: #10172b;
+$light-green-50: #141a1d; // Muy oscuro, fondo principal
+$light-green-100: #0f1416; // Fondo secundario
+$light-green-200: #0a0d0f; // Bordes, contornos
+$light-green-300: #050707; // Hover suave
+$light-green-400: #000000; // Oscuro extremo
+$light-green-500: #141a1d; // Color base (puedes cambiarlo por un acento si quieres)
+$light-green-600: #0f1416; // Más oscuro
+$light-green-700: #0a0d0f; // Más oscuro
+$light-green-800: #050707; // Más oscuro
+$light-green-900: #000000; // Más oscuro
+
+$light-green-A100: #141a1d; // Variante pastel
+$light-green-A200: #0f1416; // Variante media
+$light-green-A400: #0a0d0f; // Variante saturada
+$light-green-A700: #050707; // Variante fuerte
+
+$deep-green-dark: #000000; // Fondo ultra oscuro
 
 // Colores semánticos principales
-$brand-light-green-color: #06a606;
+$brand-light-green-color: #050707;
 $primary-color: $light-green-500;
 // $secondary-color: $light-green-900;
 $accent-color: $light-green-A400;
@@ -32,16 +34,15 @@ $surface-color: $white-color-base;
 $error-color: #b00020;
 $gray-color: #797979;
 
-$heigth-nav-bar: 80px;
-$width-side-bar: 300px;
-
-// Medidas globales
-$brand-height-router-outlet-container: calc(100vh - ($heigth-nav-bar));
+$heigth-nav-bar-destok: 80px;
+$heigth-nav-bar-mobile: 50px;
+$heigth-footer: 90px;
 
 // Layout
-$side-bar-background: #06a606;
-$side-bar-background-color: #0dda0d;
-$header-background: #ffffff;
+$side-bar-background: #050707;
+$side-bar-background-color: #050707;
+$header-background: $light-green-50;
+$body-background: $light-green-50;
 
 // UI Components
 $brand-mobile-font-size: 14px;
@@ -56,19 +57,19 @@ $brand-mat-menu-active-item-size: 14px;
 
 /*Colores para componentes*/
 $brand-error-color: $brand-red-color;
-$brand-light-green-color: #06a606;
+$brand-light-green-color: #050707;
 $brand-gray-color: $gray-color;
 $brand-border-radius: 24px;
 $brand-border-radius-sm: 16px;
 $brand-border-radius-manage-users-cards: 6px;
-$brand-green-color: #06a606;
+$brand-green-color: #050707;
 $brand-radio-checked-color: $brand-green-color;
 $brand-outlined-rounded-inputs-color: $brand-gray-color;
 $brand-outlined-inputs-color: $brand-light-green-color;
 $brand-icons-color: $brand-light-green-color;
 $brand-green-button-color: $brand-green-color;
 $brand-form-field-focus-color: $brand-green-color;
-$brand-success-input-color: #06a606;
+$brand-success-input-color: #050707;
 $brand-global-height-button: $brand-tablet-height;
 
 // Para tamaños de pantalla
@@ -110,12 +111,14 @@ $font-weight-bold: 700;
 
 // Espaciado
 $spacing-small: 8px;
+$spacing-medium-small: 10px;
 $spacing-medium: 16px;
 $spacing-large: 24px;
 
 // Colores de texto
-$text-primary: $light-green-900;
+$text-primary: $white-color-base;
 $text-secondary: $light-green-600;
+$text-black: $black-color-base;
 $text-disabled: $light-green-100;
 $text-on-primary: $white-color-base;
 $text-on-secondary: $white-color-base;
