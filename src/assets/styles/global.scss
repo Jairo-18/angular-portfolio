@@ -47,6 +47,7 @@
   padding-block: 7px;
   display: flex;
   justify-content: center;
+  z-index: 999;
 
   @media (max-width: 768px) {
     padding-block: 0;

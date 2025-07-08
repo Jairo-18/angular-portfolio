@@ -9,7 +9,7 @@
     <section class="flex flex-col md:flex-row gap-8 items-stretch">
       <!-- FRONTEND -->
       <div
-        class="relative group flex flex-col w-full md:w-[33%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-neutral-950 p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
+        class="relative group flex flex-col w-full md:w-[33%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
       >
         <div class="flex items-center gap-x-2">
           <mat-icon>desktop_mac</mat-icon>
@@ -18,7 +18,7 @@
         <div class="flex flex-wrap w-full justify-start gap-2">
           @for (tag of frontendTags; track $index) {
           <span
-            class="px-3 py-1 bg-[#141a1d] rounded-full text-sm font-medium min-w-max"
+            class="px-3 py-1 bg-[#050707] rounded-full text-sm font-medium min-w-max"
           >
             {{ tag }}
           </span>
@@ -33,7 +33,7 @@
 
       <!-- BACKEND -->
       <div
-        class="relative group flex flex-col w-full md:w-[33%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-neutral-950 p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
+        class="relative group flex flex-col w-full md:w-[33%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
       >
         <div class="flex items-center gap-x-2">
           <i class="fa-solid fa-server"></i>
@@ -57,7 +57,7 @@
 
       <!-- TOOLS -->
       <div
-        class="relative group flex flex-col w-full md:w-[33%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-neutral-950 p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
+        class="relative group flex flex-col w-full md:w-[33%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
       >
         <div class="flex items-center gap-x-2">
           <i class="fa-solid fa-wrench"></i>
@@ -66,7 +66,7 @@
         <div class="flex flex-wrap w-full justify-start gap-2">
           @for (tag of toolsTags; track $index) {
           <span
-            class="px-3 py-1 bg-[#141a1d] rounded-full text-sm font-medium min-w-max"
+            class="px-3 py-1 bg-[#050707] rounded-full text-sm font-medium min-w-max"
           >
             {{ tag }}
           </span>
