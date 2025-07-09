@@ -152,7 +152,8 @@ export const EDUCATIONS: Education[] = [
       'Promedio 4,1',
       'Certificación Tecnológica'
     ],
+    certificateUrl: ' ',
     instituteUrl: 'https://itp.edu.co/ITP2022/',
-    status: 'En progreso'
+    status: 'Completado'
   }
 ];

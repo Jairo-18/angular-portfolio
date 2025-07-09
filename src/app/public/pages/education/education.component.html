@@ -83,15 +83,17 @@
 
           <!-- Certificación o título -->
           <div
-            class="flex gap-4 mt-auto w-full"
+            class="flex gap-2 md:gap-4 mt-auto w-full"
             *ngIf="education.certificateUrl"
           >
             <a
               [href]="education.certificateUrl"
               target="_blank"
-              class="flex-1 relative group inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-[#141a1d] to-[#000000] px-6 font-medium text-white transition hover:scale-105"
+              class="flex-1 relative group inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-[#141a1d] to-[#000000] px-3 md:px-6 font-medium text-white transition hover:scale-105"
             >
-              <span class="min-w-max">Ver Certificado</span>
+              <span class="min-w-max text-sm md:text-base">
+                Ver Certificado</span
+              >
               <div
                 class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
               >
@@ -102,9 +104,11 @@
               [href]="education.instituteUrl"
               target="_blank"
               rel="noopener noreferrer"
-              class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-transparent border border-[#050707] px-6 font-medium text-neutral-200 transition hover:scale-110"
+              class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-transparent border border-[#050707] px-3 md:px-6 font-medium text-neutral-200 transition hover:scale-110"
             >
-              <span class="min-w-max">Visitar Sitio Web</span>
+              <span class="min-w-max text-sm md:text-base"
+                >Visitar Sitio Web</span
+              >
               <div
                 class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
               >
