@@ -31,6 +31,13 @@ export const publicRoutes: Routes = [
           )
       },
       {
+        path: 'education',
+        loadComponent: () =>
+          import('./pages/education/education.component').then(
+            (m) => m.EducationComponent
+          )
+      },
+      {
         path: 'contact',
         loadComponent: () =>
           import('./pages/contact/contact.component').then(
