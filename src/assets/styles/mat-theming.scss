@@ -9,7 +9,7 @@ button {
 
 input,
 textarea {
-  caret-color: inherit !important;
+  caret-color: white !important;
 }
 
 /*
@@ -261,7 +261,7 @@ mat-form-field {
 .mat-mdc-fab[disabled] {
   --brand-primary-color-rgba: #{color.adjust($primary-color, $alpha: -0.6)};
   --mat-fab-disabled-state-container-color: var(--brand-primary-color-rgba);
-  color: $black-color-base-10 !important;
+  color: $white-color-base !important;
 }
 
 .mat-mdc-outlined-button[disabled] {

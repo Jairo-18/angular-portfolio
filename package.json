@@ -28,6 +28,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "chart.js": "^4.4.1",
+    "emailjs-com": "^3.2.0",
     "html2pdf.js": "^0.10.3",
     "ng2-charts": "^4.1.1",
     "ngx-toastr": "^19.0.0",

@@ -1,10 +1,154 @@
 <article class="brand-content-center">
-  <div class="w-[90%] md:w-full px-0 md:px-10">
+  <div class="w-[90%] md:w-full px-0 md:px-10 my-0 md:my-12">
     <section class="flex flex-col text-center gap-8 mb-8">
-      <span class="text-2xl md:text-5xl font-bold"> Contacto </span>
+      <span class="text-2xl md:text-5xl font-bold">Contacto</span>
       <p class="text-sm md:text-lg leading-relaxed">
         ¿Tienes un trabajo para mí? ¡Hablemos!
       </p>
+    </section>
+
+    <section class="flex flex-col md:flex-row w-full gap-8 mb-8">
+      <div
+        class="flex flex-col place-content-center w-full md:w-[50%] py-10 space-y-6"
+      >
+        <!-- Email -->
+        <div class="flex items-center w-full gap-4 text-lg">
+          <i class="fa-solid fa-envelope center-icon w-6 text-center"></i>
+          <div class="flex items-center gap-2 flex-1">
+            <a
+              href="mailto:jhonlegarda1.2@gmail.com"
+              class="hover:underline hover:text-blue-600"
+            >
+              jhonlegarda1.2&#64;gmail.com
+            </a>
+            <button
+              (click)="copyToClipboard('jhonlegarda1.2@gmail.com')"
+              class="text-gray-500 hover:text-blue-600 ml-2"
+              title="Copiar email"
+            >
+              <i class="fa-solid fa-copy text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- GitHub -->
+        <div
+          class="flex items-center w-full gap-4 text-lg hover:text-blue-600 transition-colors"
+        >
+          <i class="fa-brands fa-github center-icon w-6 text-center"></i>
+          <a
+            href="https://github.com/Jairo-18?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+          >
+            GitHub y Repositorios
+          </a>
+        </div>
+
+        <!-- LinkedIn -->
+        <div
+          class="flex items-center w-full gap-4 text-lg hover:text-blue-600 transition-colors"
+        >
+          <i class="fa-brands fa-linkedin center-icon w-6 text-center"></i>
+          <a
+            href="https://www.linkedin.com/in/jhon-jairo-legarda-erazo-ba02422a4/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+          >
+            LinkedIn
+          </a>
+        </div>
+
+        <!-- Teléfono -->
+        <div class="flex items-center w-full gap-4 text-lg">
+          <i class="fa-solid fa-phone center-icon w-6 text-center"></i>
+          <div class="flex items-center gap-2 flex-1">
+            <a
+              href="tel:+573102103660"
+              class="hover:underline hover:text-blue-600"
+            >
+              +57 3102103660
+            </a>
+            <button
+              (click)="copyToClipboard('+57 3102103660')"
+              class="text-gray-500 hover:text-blue-600 ml-2"
+              title="Copiar teléfono"
+            >
+              <i class="fa-solid fa-copy text-sm"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- CV -->
+        <div
+          class="flex items-center w-full gap-4 text-lg hover:text-blue-600 transition-colors"
+        >
+          <i class="fa-solid fa-file-pdf center-icon w-6 text-center"></i>
+          <a
+            href="../../../../assets/files/CV-15-06.pdf"
+            download="CV_JhonLegarda.pdf"
+            class="hover:underline"
+          >
+            Descargar CV
+          </a>
+        </div>
+      </div>
+      <div
+        class="flex flex-col w-full md:w-[50%] gap-y-4 border border-[#050707] p-4 rounded-lg"
+      >
+        <span class="text-lg md:text-xl font-bold">Envíame un mensaje</span>
+        <p class="text-sm md:text-base leading-relaxed text-gray-300">
+          Te responderé lo antes posible
+        </p>
+        <form #contactForm class="w-full flex flex-col gap-4 text-white">
+          <input
+            type="text"
+            name="name"
+            placeholder="Tus nombres y apellidos"
+            required
+            class="w-full p-3 border border-[#050707] rounded-md bg-transparent"
+          />
+
+          <input
+            type="email"
+            name="email"
+            placeholder="Tu email"
+            required
+            class="w-full p-3 border border-[#050707] rounded-md bg-transparent"
+          />
+
+          <input
+            type="text"
+            name="subject"
+            placeholder="Asunto"
+            required
+            class="w-full p-3 border border-[#050707] rounded-md bg-transparent"
+          />
+
+          <textarea
+            name="message"
+            rows="6"
+            placeholder="Escribe tu mensaje..."
+            required
+            class="w-full p-3 border border-[#050707] rounded-md bg-transparent"
+          ></textarea>
+
+          <button
+            (click)="sendEmail()"
+            type="button"
+            class="relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-[#141a1d] to-[#000000] px-6 font-medium text-neutral-200 transition hover:scale-110 group"
+          >
+            <span class="min-w-max">Enviar</span>
+            <div
+              class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
+            >
+              <div class="relative h-full w-8 bg-white/20"></div>
+            </div>
+          </button>
+        </form>
+      </div>
     </section>
   </div>
 </article>
