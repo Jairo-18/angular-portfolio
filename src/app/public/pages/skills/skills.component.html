@@ -6,10 +6,31 @@
         Tecnologías y herramientas que domino para crear soluciones completas
       </p>
     </section>
-    <section class="flex flex-col md:flex-row gap-8 items-stretch">
+    <section
+      class="flex flex-col md:flex-row flex-wrap justify-center gap-8 items-stretch"
+    >
+      <!-- LANGUAGES -->
+      <div
+        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
+      >
+        <div class="flex items-center gap-x-2">
+          <mat-icon>code</mat-icon>
+          <span class="text-lg md:text-3xl font-normal">Lenguajes</span>
+        </div>
+        <div class="flex flex-wrap w-full justify-start gap-2">
+          @for (tag of languagesTags; track $index) {
+          <span
+            class="px-3 py-1 bg-[#050707] rounded-full text-sm font-medium min-w-max"
+          >
+            {{ tag }}
+          </span>
+          }
+        </div>
+      </div>
+
       <!-- FRONTEND -->
       <div
-        class="relative group flex flex-col w-full md:w-[33%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
+        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
       >
         <div class="flex items-center gap-x-2">
           <mat-icon>desktop_mac</mat-icon>
@@ -18,22 +39,17 @@
         <div class="flex flex-wrap w-full justify-start gap-2">
           @for (tag of frontendTags; track $index) {
           <span
-            class="px-3 py-1 bg-[#050707] rounded-full text-sm font-medium min-w-max"
+            class="px-3 py-1 bg-[#141a1d] rounded-full text-sm font-medium min-w-max"
           >
             {{ tag }}
           </span>
           }
         </div>
-        <!-- <div
-          class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
-        >
-          <div class="relative h-full w-8 bg-white/20"></div>
-        </div> -->
       </div>
 
       <!-- BACKEND -->
       <div
-        class="relative group flex flex-col w-full md:w-[33%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
+        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
       >
         <div class="flex items-center gap-x-2">
           <i class="fa-solid fa-server"></i>
@@ -42,22 +58,36 @@
         <div class="flex flex-wrap w-full justify-start gap-2">
           @for (tag of backendTags; track $index) {
           <span
+            class="px-3 py-1 bg-[#050707] rounded-full text-sm font-medium min-w-max"
+          >
+            {{ tag }}
+          </span>
+          }
+        </div>
+      </div>
+
+      <!-- DATABASES -->
+      <div
+        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
+      >
+        <div class="flex items-center gap-x-2">
+          <i class="fa-solid fa-database"></i>
+          <span class="text-lg md:text-3xl font-normal">Bases de Datos</span>
+        </div>
+        <div class="flex flex-wrap w-full justify-start gap-2">
+          @for (tag of databaseTags; track $index) {
+          <span
             class="px-3 py-1 bg-[#141a1d] rounded-full text-sm font-medium min-w-max"
           >
             {{ tag }}
           </span>
           }
         </div>
-        <!-- <div
-          class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
-        >
-          <div class="relative h-full w-8 bg-white/20"></div>
-        </div> -->
       </div>
 
       <!-- TOOLS -->
       <div
-        class="relative group flex flex-col w-full md:w-[33%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
+        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
       >
         <div class="flex items-center gap-x-2">
           <i class="fa-solid fa-wrench"></i>
@@ -72,11 +102,6 @@
           </span>
           }
         </div>
-        <!-- <div
-          class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
-        >
-          <div class="relative h-full w-8 bg-white/20"></div>
-        </div> -->
       </div>
     </section>
   </div>

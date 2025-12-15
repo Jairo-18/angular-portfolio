@@ -155,5 +155,25 @@ export const EDUCATIONS: Education[] = [
     certificateUrl: ' ',
     instituteUrl: 'https://itp.edu.co/ITP2022/',
     status: 'Completado'
+  },
+  {
+    id: 7,
+    title: 'Ingeniería de Sistemas',
+    institute: 'Institución Universitaria del Putumayo',
+    description:
+      'Formación profesional en ingeniería de sistemas. Actualmente cursando el primer semestre.',
+    image: 'assets/images/ITP.png',
+    startDate: '2025',
+    endDate: 'Presente',
+    subjects: [
+      'Ingeniería de Software',
+      'Matemáticas',
+      'Programación',
+      'Bases de Datos'
+    ],
+    achievements: [],
+    certificateUrl: ' ',
+    instituteUrl: 'https://itp.edu.co/ITP2022/',
+    status: 'En progreso'
   }
 ];

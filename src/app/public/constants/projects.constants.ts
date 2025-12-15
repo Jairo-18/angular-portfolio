@@ -9,6 +9,37 @@ export interface ProjectInterface {
   achievements?: string[];
 }
 
+export const CINECLUB_PROJECT: ProjectInterface = {
+  image: 'assets/images/CINECLUB.jpg',
+  title: 'Cineclub+ - Blog y Comunidad de Cine',
+  description:
+    'Plataforma social tipo blog diseñada para crear una comunidad de cine. Lideré el desarrollo frontend diseñando una interfaz interactiva y moderna, integrando funcionalidades de comunidad avanzadas y gestión de contenido en tiempo real.',
+  demoUrl: 'https://cineclub-front-dev.vercel.app/home',
+  technologies: [
+    'Angular',
+    'Tailwind CSS',
+    'WebSockets',
+    'Spring Boot',
+    'PostgreSQL',
+    'OAuth 2.0',
+    'JWT'
+  ],
+  role: 'Desarrollador Frontend',
+  features: [
+    'Sistema de recomendaciones y reacciones',
+    'Hilos de comentarios y comunidad',
+    'Notificaciones en tiempo real con WebSockets',
+    'Autenticación OAuth 2.0 y JWT',
+    'Panel administrativo de moderación',
+    'Módulo para compartir y solicitar películas'
+  ],
+  achievements: [
+    'Diseño de interfaz interactiva y moderna',
+    'Integración exitosa de WebSockets',
+    'Gestión completa de comunidad'
+  ]
+};
+
 export const PROJECTZEN_PROJECT: ProjectInterface = {
   image: 'assets/images/PROJECTZEN.png',
   title: 'ProjectZen - Gestor de Tareas y Proyectos',
@@ -138,6 +169,7 @@ export const SAMAWE_PROJECT: ProjectInterface = {
 };
 
 export const PROJECTS: ProjectInterface[] = [
+  CINECLUB_PROJECT,
   PROJECTZEN_PROJECT,
   REMAKE_PROJECT,
   IPUC_PROJECT,

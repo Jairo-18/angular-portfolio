@@ -9,50 +9,55 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
-  frontendTags = [
-    'HTML',
-    'CSS',
-    'JavaScript',
+  languagesTags = [
     'TypeScript',
+    'JavaScript',
+    'Java',
+    'Python',
+    'Kotlin',
+    'PHP'
+  ];
+
+  frontendTags = [
     'Angular',
     'React',
     'Astro',
+    'HTML',
+    'CSS',
+    'SCSS',
     'Tailwind CSS',
     'Bootstrap',
-    'RxJS',
-    'SCSS',
-    'Material UI',
-    'NgRx'
+    'Angular Material',
+    'Wix',
+    'Websockets'
   ];
 
   backendTags = [
-    'NodeJS',
     'NestJS',
+    'FastAPI',
+    'Spring Boot',
+    'Node.js',
     'Express',
-    'PostgreSQL',
-    'MySQL',
-    'TypeORM',
     'JWT',
     'Bcrypt',
-    'Swagger',
-    'REST API',
-    'MongoDB',
+    'TypeORM',
     'Migraciones'
   ];
+
+  databaseTags = ['PostgreSQL', 'MySQL', 'MongoDB'];
 
   toolsTags = [
     'Git',
     'GitHub',
+    'Docker',
+    'VS Code',
     'Figma',
     'Postman',
-    'VSCode',
-    'HeidiSQL',
-    'Notion',
-    'npm',
-    'pnpm',
-    'Vercel',
-    'Netlify',
-    'Prettier',
-    'ESLint'
+    'Swagger',
+    'Scalar',
+    'Chart.js',
+    'NGX',
+    'HeroUI',
+    'Supabase'
   ];
 }
