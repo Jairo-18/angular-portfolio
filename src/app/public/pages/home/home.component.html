@@ -1,88 +1,124 @@
 <article class="brand-content-center">
   <section
-    class="flex flex-col md:flex-row items-center justify-between gap-8 w-full"
+    class="flex flex-col md:flex-row items-center justify-between gap-10 w-[90%] md:w-[85%]"
   >
-    <div
-      class="flex flex-col md:hidden w-[90%] md:w-[50%] justify-center items-center px-0 md:px-10"
-    >
-      <img
-        src="../../../../assets/images/FB_IMG_1686635148240.jpg"
-        alt="Foto de Jhon Jairo Legarda"
-        class="w-40 md:w-72 h-40 md:h-72 object-cover rounded-full border-2 border-[#050707] shadow-lg"
-      />
+    <!-- Foto mobile -->
+    <div class="flex md:hidden justify-center w-full animate-fade-in-right">
+      <div class="photo-container">
+        <div class="photo-ring"></div>
+        <img
+          src="../../../../assets/images/FB_IMG_1686635148240.webp"
+          alt="Foto de Jhon Jairo Legarda"
+          class="photo-img"
+        />
+      </div>
     </div>
-    <!-- Descripción -->
+
+    <!-- Texto izquierda -->
     <div
-      class="flex flex-col w-[90%] md:w-[60%] justify-start items-start px-0 md:px-10 text-left gap-4"
+      class="flex flex-col w-full md:w-[58%] items-start text-left gap-5"
     >
-      <span class="text-2xl md:text-5xl font-bold">
-        Hola, soy Jhon Jairo Legarda Erazo
-      </span>
-      <span class="text-xl md:text-4xl font-normal">
-        Desarrollador Full Stack
-      </span>
-      <p class="text-sm md:text-lg leading-relaxed">
-        Desarrollador de Software con perfil Full Stack y especialización en
-        Frontend, con 1 año y 6 meses de experiencia creando aplicaciones web
-        escalables. Mi fortaleza principal reside en el ecosistema Angular y
-        TypeScript, donde diseño interfaces modernas y de alto rendimiento
-        utilizando Tailwind CSS y arquitecturas de componentes avanzadas.
-      </p>
-      <p class="text-sm md:text-lg leading-relaxed">
-        Complemento mi experticia visual con una sólida base backend en NestJS y
-        PostgreSQL, lo que me permite integrar APIs eficientemente y gestionar
-        el ciclo completo del desarrollo. Me caracterizo por la calidad técnica
-        (Clean Code, SOLID) y una visión integral del negocio: mi experiencia en
-        gestión comercial y software administrativo (Siigo) me facilita conectar
-        las soluciones tecnológicas con las necesidades reales de facturación y
-        ventas de la empresa.
+      <!-- Badge disponible -->
+      <div class="animate-fade-in-up delay-1 flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#050707] border border-green-500/25 text-xs text-green-400 w-fit">
+        <span class="dot-available"></span>
+        Disponible para proyectos
+      </div>
+
+      <!-- Nombre -->
+      <h1 class="animate-fade-in-up delay-2 text-3xl md:text-6xl font-bold leading-tight">
+        Hola, soy<br />
+        <span class="gradient-text">Jhon Jairo Legarda</span>
+      </h1>
+
+      <!-- Subtitle con typing -->
+      <h2 class="animate-fade-in-up delay-3 text-xl md:text-3xl font-semibold text-gray-300 min-h-[2rem] flex items-center">
+        <span class="gradient-text-accent">{{ displayedText }}</span>
+        <span class="typing-cursor"></span>
+      </h2>
+
+      <!-- Descripción -->
+      <p class="animate-fade-in-up delay-4 text-sm md:text-base leading-relaxed text-gray-400 max-w-xl">
+        Más de <strong class="text-white">2 años</strong> creando aplicaciones web escalables,
+        especializado en <strong class="text-white">Angular + NestJS + TypeScript</strong>.
+        Diseño interfaces modernas e integro APIs REST, WebSockets y sistemas en tiempo real.
       </p>
 
-      <div class="flex content-between gap-x-3">
+      <p class="animate-fade-in-up delay-5 text-sm md:text-base leading-relaxed text-gray-400 max-w-xl">
+        Desarrollador <strong class="text-white">Mid</strong> con visión Full Stack, enfocado en
+        entregar soluciones reales, escalables y bien estructuradas.
+      </p>
+
+      <!-- Botones -->
+      <div class="animate-fade-in-up delay-6 flex flex-wrap gap-3 mt-1">
         <a
           routerLink="/contact"
-          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-[#141a1d] to-[#000000] px-6 font-medium text-neutral-200 transition hover:scale-110"
+          class="group relative inline-flex h-11 items-center justify-center gap-2 overflow-hidden rounded-lg bg-gradient-to-r from-[#141a1d] to-[#000000] px-6 font-medium text-white transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(74,222,128,0.15)]"
         >
-          <mat-icon>mail</mat-icon>
-          <span class="min-w-max">Contáctame</span>
-          <div
-            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
-          >
-            <div class="relative h-full w-8 bg-white/20"></div>
+          <mat-icon class="text-base">mail</mat-icon>
+          <span>Contáctame</span>
+          <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-700 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+            <div class="relative h-full w-8 bg-white/10"></div>
           </div>
         </a>
         <a
           routerLink="/projects"
-          class="gap-x-2 group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-transparent border border-[#050707] px-6 font-medium text-neutral-200 transition hover:scale-110"
+          class="group relative inline-flex h-11 items-center justify-center gap-2 overflow-hidden rounded-lg border border-white/10 px-6 font-medium text-neutral-200 transition-all hover:scale-105 hover:border-white/25"
         >
-          <span class="min-w-max">Proyectos</span>
-          <div
-            class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
-          >
-            <div class="relative h-full w-8 bg-white/20"></div>
+          <span>Ver Proyectos</span>
+          <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-700 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+            <div class="relative h-full w-8 bg-white/10"></div>
           </div>
         </a>
       </div>
-      <div class="flex content-between gap-x-3 text-xs md:text-lg">
-        <div class="flex gap-x-2">
-          <mat-icon>location_on</mat-icon><span>Putumayo, Colombia</span>
+
+      <!-- Info -->
+      <div class="animate-fade-in-up delay-7 flex flex-wrap gap-x-5 gap-y-2 text-xs text-gray-500">
+        <div class="flex items-center gap-1.5">
+          <mat-icon class="text-sm" style="font-size:14px; width:14px; height:14px;">location_on</mat-icon>
+          <span>Putumayo, Colombia</span>
         </div>
-        <div class="flex gap-x-2">
-          <i class="fa-solid fa-globe center-icon"></i
-          ><span>Disponible para remoto</span>
+        <div class="flex items-center gap-1.5">
+          <i class="fa-solid fa-globe text-xs"></i>
+          <span>Disponible para remoto</span>
         </div>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="animate-fade-in-up delay-8 flex gap-3 mt-1">
+        <a href="https://github.com/Jairo-18" target="_blank" rel="noopener noreferrer"
+          class="social-icon" title="GitHub">
+          <i class="fa-brands fa-github text-lg"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jhon-jairo-legarda-erazo-ba02422a4/" target="_blank" rel="noopener noreferrer"
+          class="social-icon" title="LinkedIn">
+          <i class="fa-brands fa-linkedin text-lg"></i>
+        </a>
+        <a href="https://www.instagram.com/jhonlegarda_1.2/" target="_blank" rel="noopener noreferrer"
+          class="social-icon" title="Instagram">
+          <i class="fa-brands fa-instagram text-lg"></i>
+        </a>
+        <a href="https://www.facebook.com/jairo.legarda.353" target="_blank" rel="noopener noreferrer"
+          class="social-icon" title="Facebook">
+          <i class="fa-brands fa-facebook text-lg"></i>
+        </a>
+        <a href="https://wa.me/573102103660?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tus%20servicios"
+          target="_blank" rel="noopener noreferrer"
+          class="social-icon !bg-[#25D366]" title="WhatsApp">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+        </a>
       </div>
     </div>
 
-    <!-- Imagen personal -->
-    <div
-      class="hidden md:flex flex-col w-[90%] md:w-[40%] justify-center items-center px-0 md:px-10"
-    >
-      <img
-        src="../../../../assets/images/FB_IMG_1686635148240.jpg"
-        alt="Foto de Jhon Jairo Legarda"
-        class="w-40 md:w-72 h-40 md:h-72 object-cover rounded-full border-2 border-[#050707] shadow-lg"
-      />
+    <!-- Foto desktop -->
+    <div class="hidden md:flex flex-col w-[42%] justify-center items-center animate-fade-in-right delay-3">
+      <div class="photo-container animate-float">
+        <div class="photo-ring"></div>
+        <img
+          src="../../../../assets/images/FB_IMG_1686635148240.webp"
+          alt="Foto de Jhon Jairo Legarda"
+          class="photo-img"
+        />
+      </div>
     </div>
   </section>
 </article>

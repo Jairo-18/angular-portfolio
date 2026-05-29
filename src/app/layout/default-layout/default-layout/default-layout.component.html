@@ -1,9 +1,20 @@
-<article class="flex flex-col">
+<article class="flex flex-col min-h-screen">
   <app-nav-bar></app-nav-bar>
   <div class="app-container">
     <main class="main">
       <router-outlet></router-outlet>
-      <!-- <app-footer></app-footer> -->
     </main>
   </div>
+  <app-footer></app-footer>
 </article>
+
+<!-- Botón flotante WhatsApp -->
+<a
+  href="https://wa.me/573102103660?text=Hola%2C%20me%20gustar%C3%ADa%20saber%20m%C3%A1s%20sobre%20tus%20servicios"
+  target="_blank"
+  rel="noopener noreferrer"
+  title="Escríbeme por WhatsApp"
+  class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg hover:scale-110 transition-transform"
+>
+  <i class="fa-brands fa-whatsapp text-3xl"></i>
+</a>

@@ -1,17 +1,19 @@
 <article class="brand-content-center">
   <div class="w-[90%] md:w-[80%] my-0 md:my-12">
-    <section class="flex flex-col text-center gap-12">
-      <span class="text-2xl md:text-5xl font-bold"> Proyectos Destacados </span>
-      <p class="text-sm md:text-lg leading-relaxed">
-        Algunos de los proyectos más importantes en los que he trabajado
-      </p>
+    <section class="flex flex-col text-center gap-14">
 
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8"
-      >
+      <div class="flex flex-col items-center gap-4 animate-fade-in-up">
+        <span class="text-2xl md:text-5xl font-bold section-heading">Proyectos Destacados</span>
+        <p class="text-sm md:text-lg text-gray-400 mt-4">
+          Algunos de los proyectos más importantes en los que he trabajado
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div
-          class="relative z-10 text-left flex flex-col max-w-[465px] min-h-[520px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-105 overflow-hidden"
-          *ngFor="let project of projects"
+          class="animate-fade-in-up card-hover relative z-10 text-left flex flex-col max-w-[465px] min-h-[520px] justify-start items-start gap-y-4 rounded-xl bg-[#0a0d0f] p-6 font-medium text-neutral-200 overflow-hidden"
+          *ngFor="let project of projects; let i = index"
+          [style.animation-delay]="(i * 0.1) + 's'"
         >
           <!-- Imagen y rol -->
           <div class="relative w-full">
@@ -20,91 +22,74 @@
               alt="Project Image"
               class="rounded-lg w-full h-48 object-cover"
             />
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-black/60 to-transparent"></div>
             <div class="absolute top-2 right-2">
-              <span
-                class="px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-[#141a1d] to-[#000000]"
-              >
+              <span class="px-3 py-1 rounded-full text-xs font-semibold text-white bg-black/60 backdrop-blur-sm border border-white/10">
                 {{ project.role }}
               </span>
             </div>
           </div>
 
-          <!-- Título y descripción -->
-          <h3 class="text-lg md:text-xl font-bold">
+          <!-- Título -->
+          <h3 class="text-lg md:text-xl font-bold leading-snug">
             {{ project.title }}
           </h3>
-          <p class="text-sm md:text-base leading-relaxed text-gray-300">
+          <p class="text-sm leading-relaxed text-gray-400">
             {{ project.description }}
           </p>
 
           <!-- Tecnologías -->
           <div class="w-full">
-            <h4 class="text-sm font-semibold text-gray-400 mb-2">
-              Tecnologías:
-            </h4>
-            <div class="flex flex-wrap gap-2">
+            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Stack</h4>
+            <div class="flex flex-wrap gap-1.5">
               <span
                 *ngFor="let tech of project.technologies"
-                class="px-2 py-1 bg-gray-700 text-white rounded-full text-xs hover:bg-blue-600 transition-colors duration-300"
+                class="tag-shimmer px-2 py-1 bg-[#141a1d] text-gray-300 rounded-md text-xs border border-white/5"
               >
                 {{ tech }}
               </span>
             </div>
           </div>
 
-          <!-- Características principales -->
-          <div
-            class="w-full"
-            *ngIf="project.features && project.features.length > 0"
-          >
-            <h4 class="text-sm font-semibold text-gray-400 mb-2">
-              Características:
-            </h4>
-            <ul class="text-xs text-gray-300 space-y-1">
-              <li
-                *ngFor="let feature of project.features.slice(0, 3)"
-                class="flex items-start gap-2"
-              >
-                <span class="text-green-400 mt-1">✓</span>
+          <!-- Características -->
+          <div class="w-full" *ngIf="project.features && project.features.length > 0">
+            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Características</h4>
+            <ul class="text-xs text-gray-400 space-y-1.5">
+              <li *ngFor="let feature of project.features.slice(0, 3)" class="flex items-start gap-2">
+                <span class="text-green-400 mt-0.5 flex-shrink-0">▸</span>
                 {{ feature }}
               </li>
             </ul>
           </div>
 
           <!-- Logros -->
-          <div
-            class="w-full"
-            *ngIf="project.achievements && project.achievements.length > 0"
-          >
-            <h4 class="text-sm font-semibold text-gray-400 mb-2">Logros:</h4>
-            <ul class="text-xs text-gray-300 space-y-1">
-              <li
-                *ngFor="let achievement of project.achievements.slice(0, 2)"
-                class="flex items-start gap-2"
-              >
-                <span class="text-yellow-400 mt-1">★</span>
+          <div class="w-full" *ngIf="project.achievements && project.achievements.length > 0">
+            <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Logros</h4>
+            <ul class="text-xs text-gray-400 space-y-1.5">
+              <li *ngFor="let achievement of project.achievements.slice(0, 2)" class="flex items-start gap-2">
+                <span class="text-yellow-400 mt-0.5 flex-shrink-0">★</span>
                 {{ achievement }}
               </li>
             </ul>
           </div>
 
-          <!-- Botones de acción -->
-          <div class="flex gap-4 mt-auto w-full">
+          <!-- Botón demo -->
+          <div class="mt-auto w-full">
             <a
               [href]="project.demoUrl"
               target="_blank"
-              class="flex-1 relative group inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-[#141a1d] to-[#000000] px-6 font-medium text-white transition hover:scale-105"
+              class="group relative inline-flex w-full h-11 items-center justify-center gap-2 overflow-hidden rounded-lg bg-gradient-to-r from-[#141a1d] to-[#000000] font-medium text-white transition-all hover:shadow-[0_0_20px_rgba(74,222,128,0.12)] hover:scale-[1.02]"
             >
-              <span class="min-w-max">Ver Demo</span>
-              <div
-                class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(100%)]"
-              >
-                <div class="relative h-full w-8 bg-white/20"></div>
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+              <span>Ver Demo</span>
+              <div class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover:duration-700 group-hover:[transform:skew(-12deg)_translateX(100%)]">
+                <div class="relative h-full w-8 bg-white/10"></div>
               </div>
             </a>
           </div>
         </div>
       </div>
+
     </section>
   </div>
 </article>

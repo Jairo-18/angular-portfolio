@@ -1,108 +1,90 @@
 <article class="brand-content-center">
-  <div class="w-[90%] md:w-full px-0 md:px-10">
-    <section class="flex flex-col text-center gap-8 mb-8">
-      <span class="text-2xl md:text-5xl font-bold"> Habilidades Ténicas </span>
-      <p class="text-sm md:text-lg leading-relaxed">
+  <div class="w-[90%] md:w-full px-0 md:px-10 mb-12">
+
+    <section class="flex flex-col text-center gap-4 mb-14 animate-fade-in-up">
+      <span class="text-2xl md:text-5xl font-bold section-heading">Habilidades Técnicas</span>
+      <p class="text-sm md:text-lg text-gray-400 mt-4">
         Tecnologías y herramientas que domino para crear soluciones completas
       </p>
     </section>
-    <section
-      class="flex flex-col md:flex-row flex-wrap justify-center gap-8 items-stretch"
-    >
-      <!-- LANGUAGES -->
-      <div
-        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
-      >
-        <div class="flex items-center gap-x-2">
-          <mat-icon>code</mat-icon>
-          <span class="text-lg md:text-3xl font-normal">Lenguajes</span>
+
+    <section class="flex flex-col md:flex-row flex-wrap justify-center gap-6 items-stretch">
+
+      <!-- LENGUAJES -->
+      <div class="animate-fade-in-up delay-1 card-hover skill-card border-t-[#4ade80]">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="skill-icon-wrap text-green-400">
+            <mat-icon>code</mat-icon>
+          </div>
+          <span class="text-lg font-semibold">Lenguajes</span>
         </div>
-        <div class="flex flex-wrap w-full justify-start gap-2">
+        <div class="flex flex-wrap gap-2">
           @for (tag of languagesTags; track $index) {
-          <span
-            class="px-3 py-1 bg-[#050707] rounded-full text-sm font-medium min-w-max"
-          >
-            {{ tag }}
-          </span>
+            <span class="tag-shimmer skill-tag">{{ tag }}</span>
           }
         </div>
       </div>
 
       <!-- FRONTEND -->
-      <div
-        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
-      >
-        <div class="flex items-center gap-x-2">
-          <mat-icon>desktop_mac</mat-icon>
-          <span class="text-lg md:text-3xl font-normal">Frontend</span>
+      <div class="animate-fade-in-up delay-2 card-hover skill-card border-t-[#22d3ee]">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="skill-icon-wrap text-cyan-400">
+            <mat-icon>desktop_mac</mat-icon>
+          </div>
+          <span class="text-lg font-semibold">Frontend</span>
         </div>
-        <div class="flex flex-wrap w-full justify-start gap-2">
+        <div class="flex flex-wrap gap-2">
           @for (tag of frontendTags; track $index) {
-          <span
-            class="px-3 py-1 bg-[#141a1d] rounded-full text-sm font-medium min-w-max"
-          >
-            {{ tag }}
-          </span>
+            <span class="tag-shimmer skill-tag">{{ tag }}</span>
           }
         </div>
       </div>
 
       <!-- BACKEND -->
-      <div
-        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
-      >
-        <div class="flex items-center gap-x-2">
-          <i class="fa-solid fa-server"></i>
-          <span class="text-lg md:text-3xl font-normal">Backend</span>
+      <div class="animate-fade-in-up delay-3 card-hover skill-card border-t-[#818cf8]">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="skill-icon-wrap text-indigo-400">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <span class="text-lg font-semibold">Backend</span>
         </div>
-        <div class="flex flex-wrap w-full justify-start gap-2">
+        <div class="flex flex-wrap gap-2">
           @for (tag of backendTags; track $index) {
-          <span
-            class="px-3 py-1 bg-[#050707] rounded-full text-sm font-medium min-w-max"
-          >
-            {{ tag }}
-          </span>
+            <span class="tag-shimmer skill-tag">{{ tag }}</span>
           }
         </div>
       </div>
 
-      <!-- DATABASES -->
-      <div
-        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
-      >
-        <div class="flex items-center gap-x-2">
-          <i class="fa-solid fa-database"></i>
-          <span class="text-lg md:text-3xl font-normal">Bases de Datos</span>
+      <!-- BASES DE DATOS -->
+      <div class="animate-fade-in-up delay-4 card-hover skill-card border-t-[#fb923c]">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="skill-icon-wrap text-orange-400">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <span class="text-lg font-semibold">Bases de Datos</span>
         </div>
-        <div class="flex flex-wrap w-full justify-start gap-2">
+        <div class="flex flex-wrap gap-2">
           @for (tag of databaseTags; track $index) {
-          <span
-            class="px-3 py-1 bg-[#141a1d] rounded-full text-sm font-medium min-w-max"
-          >
-            {{ tag }}
-          </span>
+            <span class="tag-shimmer skill-tag">{{ tag }}</span>
           }
         </div>
       </div>
 
-      <!-- TOOLS -->
-      <div
-        class="relative group flex flex-col w-full md:w-[30%] min-h-[220px] justify-start items-start gap-y-4 rounded-md bg-transparent border border-[#050707] p-6 font-medium text-neutral-200 transition hover:scale-110 overflow-hidden"
-      >
-        <div class="flex items-center gap-x-2">
-          <i class="fa-solid fa-wrench"></i>
-          <span class="text-lg md:text-3xl font-normal">Herramientas</span>
+      <!-- HERRAMIENTAS -->
+      <div class="animate-fade-in-up delay-5 card-hover skill-card border-t-[#f472b6]">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="skill-icon-wrap text-pink-400">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <span class="text-lg font-semibold">Herramientas</span>
         </div>
-        <div class="flex flex-wrap w-full justify-start gap-2">
+        <div class="flex flex-wrap gap-2">
           @for (tag of toolsTags; track $index) {
-          <span
-            class="px-3 py-1 bg-[#050707] rounded-full text-sm font-medium min-w-max"
-          >
-            {{ tag }}
-          </span>
+            <span class="tag-shimmer skill-tag">{{ tag }}</span>
           }
         </div>
       </div>
+
     </section>
   </div>
 </article>

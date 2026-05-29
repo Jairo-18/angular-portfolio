@@ -1,3 +1,56 @@
+.photo-container {
+  position: relative;
+  width: 272px;
+  height: 272px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.photo-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, #4ade80, #22d3ee, #818cf8, #ec4899, #4ade80);
+  animation: rotateBorder 5s linear infinite;
+  z-index: 0;
+}
+
+.photo-img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 4px;
+  background: #141a1d;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #050707;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+
+  &:hover {
+    transform: scale(1.15) translateY(-2px);
+    box-shadow: 0 4px 16px rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.2);
+  }
+}
+
 .center-icon {
   display: flex;
   align-items: center;

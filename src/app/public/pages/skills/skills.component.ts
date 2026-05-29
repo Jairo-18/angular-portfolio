@@ -44,7 +44,14 @@ export class SkillsComponent {
     'Migraciones'
   ];
 
-  databaseTags = ['PostgreSQL', 'MySQL', 'MongoDB'];
+  databaseTags = [
+    'PostgreSQL',
+    'MySQL',
+    'MongoDB',
+    'SQL Server',
+    'Cassandra',
+    'Grafos (Neo4j)'
+  ];
 
   toolsTags = [
     'Git',
@@ -58,6 +65,7 @@ export class SkillsComponent {
     'Chart.js',
     'NGX',
     'HeroUI',
-    'Supabase'
+    'Supabase',
+    'Power BI'
   ];
 }

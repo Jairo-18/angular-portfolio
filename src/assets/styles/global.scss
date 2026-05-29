@@ -7,14 +7,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100dvh;
+  flex: 1;
 }
 
 .main {
   display: flex;
   margin-top: $heigth-nav-bar-destok;
   flex-direction: column;
-  height: 100%;
+  flex: 1;
   width: 100vw;
 
   @media (max-width: 768px) {
@@ -59,7 +59,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: $heigth-footer;
+  min-height: $heigth-footer;
   display: flex;
   justify-content: center;
 }

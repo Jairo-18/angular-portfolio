@@ -1,5 +1,203 @@
 @import 'variables';
 
+// ===== KEYFRAMES =====
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes rotateBorder {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes blinkCaret {
+  from, to { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+    transform: scale(0.95);
+  }
+}
+
+@keyframes shimmerSlide {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
+@keyframes cardGlowPulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(255,255,255,0.06); }
+  50%       { box-shadow: 0 0 20px rgba(255,255,255,0.08), 0 0 0 1px rgba(255,255,255,0.12); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+// ===== UTILITY CLASSES =====
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+// Stagger delays
+@for $i from 1 through 10 {
+  .delay-#{$i} {
+    animation-delay: #{$i * 0.12}s !important;
+  }
+}
+
+// Gradient text blanco
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #9ca3af 40%, #ffffff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 6s linear infinite;
+}
+
+// Gradient text verde-cyan (acento)
+.gradient-text-accent {
+  background: linear-gradient(135deg, #4ade80 0%, #22d3ee 50%, #4ade80 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s linear infinite;
+}
+
+// Cursor de tipeo
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: rgba(255,255,255,0.7);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blinkCaret 0.8s step-end infinite;
+}
+
+// Punto disponible
+.dot-available {
+  width: 9px;
+  height: 9px;
+  background-color: #4ade80;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+// Card con glow al hover
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.07);
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow:
+      0 0 0 1px rgba(255,255,255,0.12),
+      0 12px 40px rgba(0,0,0,0.5),
+      0 0 30px rgba(74,222,128,0.06);
+    border-color: rgba(255,255,255,0.15);
+  }
+}
+
+// Tag con shimmer al hover
+.tag-shimmer {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  transition: background 0.2s, color 0.2s;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+    transition: left 0.4s ease;
+    pointer-events: none;
+  }
+
+  &:hover::after { left: 150%; }
+  &:hover { background-color: #1e2a2e; color: #a7f3d0; }
+}
+
+// Section heading con línea accent debajo
+.section-heading {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 56px;
+    height: 3px;
+    background: linear-gradient(90deg, #4ade80, #22d3ee);
+    border-radius: 2px;
+  }
+}
+
+// Nav link activo
+.nav-active {
+  border-bottom: 2px solid #4ade80 !important;
+  background: linear-gradient(to bottom, #141a1d, #0d1a10) !important;
+}
+
+// Hover underline (mantener)
 .hover-underline-animation {
   position: relative;
 }
@@ -13,10 +211,8 @@
   left: 0;
   background-color: $primary-color;
   transition: transform 0.25s ease-out;
+  transform-origin: bottom center;
 }
 .hover-underline-animation:hover::after {
   transform: scaleX(1);
-}
-.hover-underline-animation::after {
-  transform-origin: bottom center;
 }

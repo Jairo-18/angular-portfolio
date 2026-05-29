@@ -20,7 +20,7 @@ export const EDUCATIONS: Education[] = [
     institute: 'Institución Universitaria del Putumayo',
     description:
       'Formación profesional en ingeniería de sistemas. Actualmente cursando el octavo semestre.',
-    image: 'assets/images/ITP.png',
+    image: 'assets/images/ITP.webp',
     startDate: '2025',
     endDate: 'Presente',
     subjects: [
@@ -43,7 +43,7 @@ export const EDUCATIONS: Education[] = [
     institute: 'Uniputumayo',
     description:
       'Programa tecnológico enfocado en desarrollo de software full-stack. Adquirí competencias en bases de datos relacionales, desarrollo frontend y backend, redes y sistemas operativos. Formación como desarrollador full-stack junior con énfasis en desarrollo de software.',
-    image: 'assets/images/ITP.png',
+    image: 'assets/images/ITP.webp',
     startDate: '2022',
     endDate: '2025',
     subjects: [
@@ -74,7 +74,7 @@ export const EDUCATIONS: Education[] = [
     institute: 'Coursera - SENATIC META',
     description:
       'Certificación en fundamentos de programación con Kotlin. Aprendí los conceptos básicos de programación, sintaxis de Kotlin, manejo de variables, clases y estructuras de control.',
-    image: 'assets/images/COURSERA.png',
+    image: 'assets/images/COURSERA.webp',
     startDate: '2024',
     endDate: '2024',
     subjects: [
@@ -95,7 +95,7 @@ export const EDUCATIONS: Education[] = [
     institute: 'Coursera - Google',
     description:
       'Certificación de Google que cubre los principios fundamentales del diseño UX. Comprendí los aspectos básicos del diseño centrado en el usuario, usabilidad y principios de interfaz.',
-    image: 'assets/images/COURSERA.png',
+    image: 'assets/images/COURSERA.webp',
     startDate: '2023',
     endDate: '2023',
     subjects: [
@@ -116,7 +116,7 @@ export const EDUCATIONS: Education[] = [
     institute: 'Coursera - Google',
     description:
       'Certificación de Google enfocada en los fundamentos del diseño de experiencia de usuario. Aprendí metodologías de diseño centrado en el usuario, procesos de investigación y técnicas de ideación.',
-    image: 'assets/images/COURSERA.png',
+    image: 'assets/images/COURSERA.webp',
     startDate: '2023',
     endDate: '2023',
     subjects: [
@@ -138,7 +138,7 @@ export const EDUCATIONS: Education[] = [
       'POLINTEC - Institución de Educación Técnica Politécnico Internacional Colombiano',
     description:
       'Formación técnica especializada en sistemas informáticos con énfasis en sistemas operativos, hardware, programación básica, y herramientas de diseño gráfico. Adquirí conocimientos fundamentales en tecnologías de la información.',
-    image: 'assets/images/POLINTEC.png',
+    image: 'assets/images/POLINTEC.webp',
     startDate: '2018',
     endDate: '2021',
     subjects: [
@@ -160,7 +160,7 @@ export const EDUCATIONS: Education[] = [
     institute: 'Institución Educativa PIO XII',
     description:
       'Formación integral en educación básica primaria, secundaria y bachillerato. Completé satisfactoriamente todos los niveles académicos con enfoque en desarrollo personal y académico.',
-    image: 'assets/images/PIOXII.png',
+    image: 'assets/images/PIOXII.webp',
     startDate: '2010',
     endDate: '2021',
     subjects: [

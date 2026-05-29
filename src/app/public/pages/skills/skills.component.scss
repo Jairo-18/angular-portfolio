@@ -1,4 +1,35 @@
-.center-icon {
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 200px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: #0a0d0f;
+  border-top-width: 3px;
+  border-top-style: solid;
+
+  @media (min-width: 768px) {
+    width: calc(33% - 12px);
+  }
+}
+
+.skill-icon-wrap {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.05);
+  font-size: 18px;
+}
+
+.skill-tag {
+  padding: 4px 10px;
+  background: #141a1d;
+  color: #d1d5db;
+  border-radius: 6px;
+  font-size: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
 }
