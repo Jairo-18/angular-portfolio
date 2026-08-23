@@ -73,11 +73,12 @@
             </ul>
           </div>
 
-          <!-- Botón demo -->
-          <div class="mt-auto w-full">
+          <!-- Botón demo (solo si el proyecto tiene demo pública viva) -->
+          <div class="mt-auto w-full" *ngIf="project.demoUrl">
             <a
               [href]="project.demoUrl"
               target="_blank"
+              rel="noopener noreferrer"
               class="group relative inline-flex w-full h-11 items-center justify-center gap-2 overflow-hidden rounded-lg bg-gradient-to-r from-[#141a1d] to-[#000000] font-medium text-white transition-all hover:shadow-[0_0_20px_rgba(74,222,128,0.12)] hover:scale-[1.02]"
             >
               <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
@@ -86,6 +87,16 @@
                 <div class="relative h-full w-8 bg-white/10"></div>
               </div>
             </a>
+          </div>
+
+          <!-- Sin demo: se avisa en vez de dejar un enlace roto -->
+          <div class="mt-auto w-full" *ngIf="!project.demoUrl">
+            <div
+              class="inline-flex w-full h-11 items-center justify-center gap-2 rounded-lg border border-white/5 bg-[#0d1114] text-xs text-gray-500"
+            >
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Proyecto sin demo pública</span>
+            </div>
           </div>
         </div>
       </div>

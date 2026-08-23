@@ -24,13 +24,6 @@ export const publicRoutes: Routes = [
           )
       },
       {
-        path: 'experience',
-        loadComponent: () =>
-          import('./pages/experience/experience.component').then(
-            (m) => m.ExperienceComponent
-          )
-      },
-      {
         path: 'education',
         loadComponent: () =>
           import('./pages/education/education.component').then(

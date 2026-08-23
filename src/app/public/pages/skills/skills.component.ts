@@ -15,7 +15,8 @@ export class SkillsComponent {
     'Java',
     'Python',
     'Kotlin',
-    'PHP'
+    'PHP',
+    'SQL'
   ];
 
   frontendTags = [
@@ -28,17 +29,28 @@ export class SkillsComponent {
     'Tailwind CSS',
     'Bootstrap',
     'Angular Material',
-    'Wix',
-    'Websockets'
+    'HeroUI'
+  ];
+
+  mobileTags = [
+    'React Native',
+    'Expo',
+    'expo-router',
+    'NativeWind',
+    'EAS Build',
+    'Electron'
   ];
 
   backendTags = [
     'NestJS',
-    'FastAPI',
-    'Spring Boot',
     'Node.js',
     'Express',
+    'Spring Boot',
+    'FastAPI',
+    'APIs REST',
+    'WebSockets',
     'JWT',
+    'OAuth 2.0',
     'Bcrypt',
     'TypeORM',
     'Migraciones'
@@ -47,16 +59,35 @@ export class SkillsComponent {
   databaseTags = [
     'PostgreSQL',
     'MySQL',
-    'MongoDB',
     'SQL Server',
-    'Cassandra',
-    'Grafos (Neo4j)'
+    'MongoDB',
+    'Redis',
+    'Supabase'
+  ];
+
+  infraTags = [
+    'Docker',
+    'Dokploy',
+    'CI/CD',
+    'VPS Linux',
+    'Nginx',
+    'Cloudflare (DNS y CDN)',
+    'Google Cloud Platform',
+    'Firebase',
+    'Netlify',
+    'Vercel'
+  ];
+
+  publishingTags = [
+    'Google Play Console',
+    'Google Search Console',
+    'Google Maps API',
+    'Google OAuth'
   ];
 
   toolsTags = [
     'Git',
     'GitHub',
-    'Docker',
     'VS Code',
     'Figma',
     'Postman',
@@ -64,8 +95,7 @@ export class SkillsComponent {
     'Scalar',
     'Chart.js',
     'NGX',
-    'HeroUI',
-    'Supabase',
+    'Notion',
     'Power BI'
   ];
 }

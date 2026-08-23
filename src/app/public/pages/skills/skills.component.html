@@ -40,6 +40,21 @@
         </div>
       </div>
 
+      <!-- MÓVIL Y ESCRITORIO -->
+      <div class="animate-fade-in-up delay-3 card-hover skill-card border-t-[#a78bfa]">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="skill-icon-wrap text-violet-400">
+            <mat-icon>smartphone</mat-icon>
+          </div>
+          <span class="text-lg font-semibold">Móvil y Escritorio</span>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          @for (tag of mobileTags; track $index) {
+            <span class="tag-shimmer skill-tag">{{ tag }}</span>
+          }
+        </div>
+      </div>
+
       <!-- BACKEND -->
       <div class="animate-fade-in-up delay-3 card-hover skill-card border-t-[#818cf8]">
         <div class="flex items-center gap-3 mb-4">
@@ -65,6 +80,36 @@
         </div>
         <div class="flex flex-wrap gap-2">
           @for (tag of databaseTags; track $index) {
+            <span class="tag-shimmer skill-tag">{{ tag }}</span>
+          }
+        </div>
+      </div>
+
+      <!-- INFRAESTRUCTURA Y DEVOPS -->
+      <div class="animate-fade-in-up delay-5 card-hover skill-card border-t-[#38bdf8]">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="skill-icon-wrap text-sky-400">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <span class="text-lg font-semibold">Infraestructura y DevOps</span>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          @for (tag of infraTags; track $index) {
+            <span class="tag-shimmer skill-tag">{{ tag }}</span>
+          }
+        </div>
+      </div>
+
+      <!-- PUBLICACIÓN Y SEO -->
+      <div class="animate-fade-in-up delay-5 card-hover skill-card border-t-[#facc15]">
+        <div class="flex items-center gap-3 mb-4">
+          <div class="skill-icon-wrap text-yellow-400">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <span class="text-lg font-semibold">Publicación y SEO</span>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          @for (tag of publishingTags; track $index) {
             <span class="tag-shimmer skill-tag">{{ tag }}</span>
           }
         </div>

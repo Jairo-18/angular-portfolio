@@ -2,12 +2,52 @@ export interface ProjectInterface {
   image: string;
   title: string;
   description: string;
-  demoUrl: string;
+  /** Opcional: hay proyectos sin demo pública (cliente que no continuó, dominio caído). */
+  demoUrl?: string;
   technologies: string[];
   role: string;
   features: string[];
   achievements?: string[];
 }
+
+export const MANDALO_PROJECT: ProjectInterface = {
+  image: 'assets/images/MANDALO.png',
+  title: 'Mandalo – Marketplace de Domicilios (App Móvil)',
+  description:
+    'Marketplace de domicilios para el departamento del Putumayo, desarrollado end-to-end en solitario: aplicación móvil Android/iOS publicada en Google Play, versión web e infraestructura completa. Incluye arquitectura multi-tenant por municipio, motor de tarifas dinámico, seguimiento en tiempo real y liquidaciones automatizadas.',
+  demoUrl: 'https://somosmandalo.com/home',
+  technologies: [
+    'React Native',
+    'Expo',
+    'NestJS',
+    'PostgreSQL',
+    'TypeORM',
+    'Redis',
+    'WebSockets',
+    'Docker',
+    'Dokploy',
+    'Cloudflare',
+    'Firebase FCM',
+    'Google Play Console',
+    'Google Maps API',
+    'NativeWind'
+  ],
+  role: 'Desarrollador Full Stack Móvil',
+  features: [
+    'App móvil publicada en Google Play (Android/iOS + web)',
+    'Arquitectura multi-tenant con 5 roles y permisos por municipio',
+    'Motor de tarifas por distancia con recargos por horario, clima y demanda',
+    'Chat en tiempo real y seguimiento del repartidor en segundo plano',
+    'Notificaciones push con Firebase FCM',
+    'Liquidaciones quincenales automatizadas en dos direcciones',
+    'Infraestructura propia: Docker, CI/CD, DNS y respaldos automáticos'
+  ],
+  achievements: [
+    'Aplicación publicada en Google Play',
+    '80 usuarios concurrentes sin errores en pruebas de carga',
+    'Proyecto en producción: somosmandalo.com'
+  ]
+};
 
 export const CINECLUB_PROJECT: ProjectInterface = {
   image: 'assets/images/CINECLUB.webp',
@@ -74,7 +114,8 @@ export const REMAKE_PROJECT: ProjectInterface = {
   title: 'REMAKE - Plataforma de Apuestas Dota 2',
   description:
     'Plataforma de apuestas en tiempo real para el ecosistema de Dota 2. Participé en el levantamiento inicial del proyecto desarrollando el frontend con Angular y TailwindCSS, implementando la arquitectura de componentes y consumo de APIs externas como OpenDota para datos en tiempo real.',
-  demoUrl: 'https://www.remake-dt.com/#/home',
+  // Sin demo: el cliente no continuó el proyecto y el dominio remake-dt.com ya no resuelve.
+  demoUrl: undefined,
   technologies: [
     'Angular',
     'TypeScript',
@@ -132,15 +173,16 @@ export const IPUC_PROJECT: ProjectInterface = {
 
 export const SAMAWE_PROJECT: ProjectInterface = {
   image: 'assets/images/SAMAWE.webp',
-  title: 'Samawé Eco Hotel – Sistema Web Completo',
+  title: 'Samawé Eco Hotel – Sistema Web, Escritorio y Reservas',
   description:
-    'Sistema full-stack completo para el Eco Hotel Samawé, desde el levantamiento de requerimientos hasta el despliegue en producción. Incluye landing page pública, sistema contable, facturación electrónica, panel administrativo, comunicación en tiempo real y soporte multiidioma.',
-  demoUrl: 'https://ecohotelsamawe.com',
+    'Sistema full-stack completo para el Eco Hotel Samawé, desde el levantamiento de requerimientos hasta el despliegue en producción. Más de un año como desarrollador de confianza del cliente, en tres fases: sistema contable (entregado también como aplicación de escritorio con Electron), módulo de restaurante y landing pública multitenant con pasarela de pagos para reservas en línea.',
+  demoUrl: 'https://ecohotelsamawe.com/es',
   technologies: [
     'Angular',
     'NestJS',
     'PostgreSQL',
     'TypeORM',
+    'Electron',
     'JWT',
     'Bcrypt',
     'TailwindCSS',
@@ -150,27 +192,30 @@ export const SAMAWE_PROJECT: ProjectInterface = {
     'WebSockets',
     'Multer',
     'i18n',
+    'Multitenant',
+    'Pasarela de pagos',
     'Cron Jobs'
   ],
   role: 'Desarrollador Full Stack',
   features: [
-    'Landing page pública del eco hotel',
-    'Facturación electrónica integrada',
-    'Cambio de idioma (internacionalización i18n)',
-    'Comunicación en tiempo real con WebSockets',
-    'Carga y gestión de imágenes al servidor',
-    'Sistema de autenticación y autorización con JWT',
-    'Gestión contable completa con reportes',
+    'Sistema contable con facturación electrónica integrada',
+    'Versión de escritorio con Electron para operar sin conexión',
+    'Pasarela de pagos integrada con Booking y Airbnb',
+    'Landing multitenant con internacionalización (i18n) de punta a punta',
+    'Módulo de restaurante: menú, pedidos, mesas y facturación',
     'Panel administrativo con dashboard interactivo',
-    'Servicio de correo SMTP automatizado',
+    'Comunicación en tiempo real con WebSockets',
+    'Gestión contable completa con reportes y exportación',
+    'Autenticación y autorización con JWT',
+    'Carga y gestión de imágenes al servidor',
     'Documentación API con Swagger',
     'Tareas programadas con Cron Jobs'
   ],
   achievements: [
     'Proyecto en producción: ecohotelsamawe.com',
-    'Diseño UX/UI desde cero en Figma',
-    'Arquitectura escalable con WebSockets y i18n',
-    'Facturación electrónica completamente integrada'
+    'Vendí e implementé la solución al cliente final',
+    'Más de un año de relación continua con el cliente',
+    'Eliminó por completo el uso de hojas de cálculo manuales'
   ]
 };
 
@@ -206,10 +251,12 @@ export const LACASADELPINTOR_PROJECT: ProjectInterface = {
   ]
 };
 
+/** Orden intencional: los proyectos más fuertes y en producción van primero. */
 export const PROJECTS: ProjectInterface[] = [
-  CINECLUB_PROJECT,
+  MANDALO_PROJECT,
   SAMAWE_PROJECT,
   LACASADELPINTOR_PROJECT,
+  CINECLUB_PROJECT,
   IPUC_PROJECT,
   REMAKE_PROJECT,
   PROJECTZEN_PROJECT

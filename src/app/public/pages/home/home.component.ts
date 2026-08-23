@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent implements OnInit, OnDestroy {
   displayedText = '';
   showCursor = true;
-  private readonly fullText = 'Desarrollador Full Stack';
+  private readonly fullText = 'Desarrollador Full Stack Web & Móvil';
   private typingInterval: ReturnType<typeof setInterval> | null = null;
 
   constructor(private cdr: ChangeDetectorRef) {}

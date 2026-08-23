@@ -139,7 +139,7 @@ export const EDUCATIONS: Education[] = [
     description:
       'Formación técnica especializada en sistemas informáticos con énfasis en sistemas operativos, hardware, programación básica, y herramientas de diseño gráfico. Adquirí conocimientos fundamentales en tecnologías de la información.',
     image: 'assets/images/POLINTEC.webp',
-    startDate: '2018',
+    startDate: '2017',
     endDate: '2021',
     subjects: [
       'Sistemas Operativos',
