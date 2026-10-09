@@ -1,7 +1,7 @@
 <nav class="nav">
   <!-- Desktop -->
   <article
-    class="hidden md:flex items-center justify-between w-full h-full rounded-lg px-[3vw] backdrop-blur-md bg-[#050707]/80 border-b border-white/5"
+    class="hidden md:flex items-center justify-between w-full h-full px-[3vw] backdrop-blur-md bg-[#050707]/80 border-b border-white/5"
   >
     <!-- Brand -->
     <a routerLink="/home" class="flex items-center gap-2 group">
@@ -36,6 +36,15 @@
       >
         <mat-icon class="text-sm" style="font-size:16px">folder</mat-icon>
         <span>Proyectos</span>
+      </a>
+
+      <a
+        routerLink="/networking"
+        routerLinkActive="nav-active"
+        class="nav-link"
+      >
+        <mat-icon class="text-sm" style="font-size:16px">lan</mat-icon>
+        <span>Redes</span>
       </a>
 
       <a
@@ -83,6 +92,10 @@
       <button mat-menu-item routerLink="/projects">
         <mat-icon>folder</mat-icon>
         <span>Proyectos</span>
+      </button>
+      <button mat-menu-item routerLink="/networking">
+        <mat-icon>lan</mat-icon>
+        <span>Redes</span>
       </button>
       <button mat-menu-item routerLink="/education">
         <mat-icon>school</mat-icon>

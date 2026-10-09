@@ -1,0 +1,132 @@
+<article class="brand-content-center">
+  <div class="w-[90%] md:w-[80%] my-0 md:my-12">
+    <section class="flex flex-col text-center gap-14">
+
+      <div class="flex flex-col items-center gap-4 animate-fade-in-up">
+        <span class="text-2xl md:text-5xl font-bold section-heading">Redes e Infraestructura</span>
+        <p class="text-sm md:text-lg text-gray-400 mt-4 max-w-2xl">
+          No solo desarrollo software: también trabajo como técnico de redes independiente,
+          instalando equipos, organizando racks y dejando la infraestructura funcionando.
+        </p>
+      </div>
+
+      <!-- Servicios -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-left">
+        <div
+          *ngFor="let service of services; let i = index"
+          class="animate-fade-in-up card-hover flex items-start gap-3 rounded-xl bg-[#0a0d0f] p-5 border border-white/5"
+          [style.animation-delay]="(i * 0.05) + 's'"
+        >
+          <mat-icon class="text-green-400 flex-shrink-0">{{ service.icon }}</mat-icon>
+          <div class="flex flex-col gap-1">
+            <h3 class="text-sm md:text-base font-semibold text-neutral-200">{{ service.title }}</h3>
+            <p class="text-xs md:text-sm text-gray-400 leading-relaxed">{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trabajos -->
+      <div class="flex flex-col gap-8">
+        <div
+          *ngFor="let job of jobs; let i = index"
+          class="animate-fade-in-up card-hover text-left grid grid-cols-1 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] gap-6 rounded-xl bg-[#0a0d0f] p-6 font-medium text-neutral-200 overflow-hidden"
+          [style.animation-delay]="(i * 0.1) + 's'"
+        >
+          <!-- Fotos -->
+          <div class="grid grid-cols-2 gap-3">
+            <a
+              *ngFor="let image of job.images"
+              [href]="image.src"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative block overflow-hidden rounded-lg"
+              [title]="image.caption"
+            >
+              <img
+                [src]="image.src"
+                [alt]="image.caption"
+                loading="lazy"
+                class="w-full h-56 md:h-72 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-2">
+                <span class="text-[11px] leading-tight text-gray-200">{{ image.caption }}</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Detalle -->
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="px-3 py-1 rounded-full text-xs font-semibold text-white bg-black/60 border border-white/10">
+                {{ job.role }}
+              </span>
+              <span *ngIf="job.date" class="px-3 py-1 rounded-full text-xs text-gray-300 bg-[#141a1d] border border-white/5">
+                {{ job.date }}
+              </span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+              <h3 class="text-lg md:text-xl font-bold leading-snug">{{ job.title }}</h3>
+              <span class="text-sm font-semibold text-green-400">{{ job.client }}</span>
+              <span class="text-xs text-gray-500 flex items-center gap-1">
+                <i class="fa-solid fa-location-dot"></i> {{ job.location }}
+              </span>
+            </div>
+
+            <p class="text-sm leading-relaxed text-gray-400">{{ job.description }}</p>
+
+            <div class="w-full">
+              <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Qué hice</h4>
+              <ul class="text-xs md:text-sm text-gray-400 space-y-1.5">
+                <li *ngFor="let task of job.tasks" class="flex items-start gap-2">
+                  <span class="text-green-400 mt-0.5 flex-shrink-0">▸</span>
+                  {{ task }}
+                </li>
+              </ul>
+            </div>
+
+            <div class="w-full" *ngIf="job.highlights && job.highlights.length > 0">
+              <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Logros</h4>
+              <ul class="text-xs md:text-sm text-gray-400 space-y-1.5">
+                <li *ngFor="let highlight of job.highlights" class="flex items-start gap-2">
+                  <span class="text-yellow-400 mt-0.5 flex-shrink-0">★</span>
+                  {{ highlight }}
+                </li>
+              </ul>
+            </div>
+
+            <div class="w-full" *ngIf="job.equipment && job.equipment.length > 0">
+              <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Equipos</h4>
+              <div class="flex flex-wrap gap-1.5">
+                <span
+                  *ngFor="let item of job.equipment"
+                  class="tag-shimmer px-2 py-1 bg-[#141a1d] text-gray-300 rounded-md text-xs border border-white/5"
+                >
+                  {{ item }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Otros trabajos -->
+      <div class="flex flex-col gap-4 text-left">
+        <h3 class="text-lg md:text-2xl font-bold text-center">Otros trabajos</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+            *ngFor="let other of otherJobs"
+            class="card-hover flex items-start gap-3 rounded-xl bg-[#0a0d0f] p-5 border border-white/5"
+          >
+            <mat-icon class="text-green-400 flex-shrink-0">handyman</mat-icon>
+            <div class="flex flex-col gap-1">
+              <span class="text-sm md:text-base font-semibold text-neutral-200">{{ other.client }}</span>
+              <span class="text-xs md:text-sm text-gray-400">{{ other.description }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</article>

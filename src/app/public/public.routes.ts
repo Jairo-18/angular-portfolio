@@ -24,6 +24,13 @@ export const publicRoutes: Routes = [
           )
       },
       {
+        path: 'networking',
+        loadComponent: () =>
+          import('./pages/networking/networking.component').then(
+            (m) => m.NetworkingComponent
+          )
+      },
+      {
         path: 'education',
         loadComponent: () =>
           import('./pages/education/education.component').then(

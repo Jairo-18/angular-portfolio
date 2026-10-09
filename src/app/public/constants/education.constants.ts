@@ -19,11 +19,17 @@ export const EDUCATIONS: Education[] = [
     title: 'Ingeniería de Sistemas',
     institute: 'Institución Universitaria del Putumayo',
     description:
-      'Formación profesional en ingeniería de sistemas. Actualmente cursando el octavo semestre.',
+      'Formación profesional en ingeniería de sistemas. Actualmente cursando el noveno semestre, con la propuesta de trabajo de grado en curso.',
     image: 'assets/images/ITP.webp',
     startDate: '2025',
     endDate: 'Presente',
     subjects: [
+      'Sistemas Distribuidos',
+      'Sistemas Expertos',
+      'Minería de Datos',
+      'Diseño y Formulación de Proyectos TI',
+      'Propuesta de Trabajo de Grado',
+      'Fibra Óptica (Electiva Profesional)',
       'Machine Learning',
       'Inteligencia Artificial',
       'Programación Avanzada',
