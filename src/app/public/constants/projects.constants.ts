@@ -63,6 +63,48 @@ export const MANDALO_PROJECT: ProjectInterface = {
   ]
 };
 
+export const RANCHOPORVENIR_PROJECT: ProjectInterface = {
+  image: 'assets/images/RANCHOPORVENIR.webp',
+  title: 'Rancho Porvenir – Sitio Web y Panel para Hotel Ecológico',
+  description:
+    'Sitio web y panel administrativo para un hotel ecológico en el piedemonte amazónico de Mocoa. El visitante arma su plan (cabaña, cabalgatas y productos), ve el total estimado con precios dinámicos por noche y lo envía al WhatsApp del negocio con un mensaje prellenado. El dueño gestiona todo el contenido desde un panel usable en el celular.',
+  demoUrl: 'https://ranchoporvenir.ecohotelsamawe.com',
+  technologies: [
+    'Next.js',
+    'React',
+    'TypeScript',
+    'Tailwind CSS',
+    'NestJS',
+    'PostgreSQL',
+    'TypeORM',
+    'JWT',
+    'Zod',
+    'Sharp',
+    'Swagger',
+    'Vitest',
+    'Docker',
+    'Dokploy',
+    'Cloudflare'
+  ],
+  role: 'Desarrollador Full Stack',
+  features: [
+    'Motor de precios por noche: entre semana, fin de semana y reglas especiales para festivos y temporadas',
+    'Flujo «Mi solicitud» que arma el plan y lo envía a WhatsApp con el mensaje prellenado',
+    'Panel administrativo usable desde el celular con editor de fotos antes de subir',
+    'Calculadora con selector de fechas propio y desglose noche por noche',
+    'Festivos de Colombia calculados con la Ley Emiliani',
+    'Sesión del panel en cookies httpOnly con refresh token rotativo',
+    'Logo, ajustes e información para el huésped editables sin tocar código',
+    'Cambios del panel visibles al instante en el sitio (revalidación de caché)',
+    'SEO con Server Components, metadata y Open Graph por página'
+  ],
+  achievements: [
+    'Proyecto en producción, del diseño al despliegue',
+    'Tests unitarios del servicio de precios y del generador del mensaje de WhatsApp',
+    'Optimización automática de imágenes a WebP con Sharp'
+  ]
+};
+
 export const CINECLUB_PROJECT: ProjectInterface = {
   image: 'assets/images/CINECLUB.webp',
   title: 'Cineclub+ - Blog y Comunidad de Cine',
@@ -277,6 +319,7 @@ export const LACASADELPINTOR_PROJECT: ProjectInterface = {
 export const PROJECTS: ProjectInterface[] = [
   MANDALO_PROJECT,
   SAMAWE_PROJECT,
+  RANCHOPORVENIR_PROJECT,
   LACASADELPINTOR_PROJECT,
   CINECLUB_PROJECT,
   IPUC_PROJECT,
