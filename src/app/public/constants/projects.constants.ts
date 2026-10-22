@@ -68,7 +68,7 @@ export const RANCHOPORVENIR_PROJECT: ProjectInterface = {
   title: 'Rancho Porvenir – Sitio Web y Panel para Hotel Ecológico',
   description:
     'Sitio web y panel administrativo para un hotel ecológico en el piedemonte amazónico de Mocoa. El visitante arma su plan (cabaña, cabalgatas y productos), ve el total estimado con precios dinámicos por noche y lo envía al WhatsApp del negocio con un mensaje prellenado. El dueño gestiona todo el contenido desde un panel usable en el celular.',
-  demoUrl: 'https://ranchoporvenir.ecohotelsamawe.com',
+  demoUrl: 'https://ranchoporvenirmocoa.com',
   technologies: [
     'Next.js',
     'React',
@@ -99,9 +99,47 @@ export const RANCHOPORVENIR_PROJECT: ProjectInterface = {
     'SEO con Server Components, metadata y Open Graph por página'
   ],
   achievements: [
-    'Proyecto en producción, del diseño al despliegue',
+    'Proyecto en producción con dominio propio: ranchoporvenirmocoa.com',
     'Tests unitarios del servicio de precios y del generador del mensaje de WhatsApp',
     'Optimización automática de imágenes a WebP con Sharp'
+  ]
+};
+
+export const CRAZYLOVE_PROJECT: ProjectInterface = {
+  image: 'assets/images/CRAZYLOVE.webp',
+  title: 'Motel Crazy Love – Carta Digital y Catálogo (Multi-hotel)',
+  description:
+    'Sitio público del Motel Crazy Love en Mocoa, construido sobre la plataforma multi-hotel de Samawé: el mismo backend y el mismo panel administrativo atienden a los dos negocios como organizaciones separadas. El huésped escanea el QR de la habitación y ve habitaciones con tarifas por horas, servicios y la carta completa; el dueño gestiona todo desde el panel con la marca de su hotel.',
+  demoUrl: 'https://crazylove.ecohotelsamawe.com',
+  technologies: [
+    'Next.js 16',
+    'React',
+    'TypeScript',
+    'Tailwind CSS 4',
+    'NestJS',
+    'PostgreSQL',
+    'TypeORM',
+    'Multitenant',
+    'Angular',
+    'Docker',
+    'Dokploy',
+    'Cloudflare'
+  ],
+  role: 'Desarrollador Full Stack',
+  features: [
+    'Segundo hotel sobre el backend multitenant de Samawé: el dominio de cada petición decide la organización',
+    'Carta digital de un solo scroll para el QR de las habitaciones, con buscador y barra de secciones',
+    'Habitaciones con tarifas por horas: "¿Cuánto tiempo te quedas?" reordena por precio y marca la más económica',
+    'Panel compartido con Samawé: login por hotel, marca y colores de cada organización',
+    'Fichas de producto en hoja deslizable con enlace compartible y botón "atrás" que la cierra',
+    'Galería con visor a pantalla completa y carrusel con scroll-snap, sin librerías',
+    'Modo claro/oscuro según el celular con los colores del hotel',
+    'Caché de datos con Next 16 (use cache): los cambios del panel se ven en un minuto'
+  ],
+  achievements: [
+    'En producción: crazylove.ecohotelsamawe.com',
+    'Datos de cada hotel aislados: registros de otra organización responden 404',
+    'Nuevo cliente sin duplicar backend, base de datos ni panel'
   ]
 };
 
@@ -229,9 +267,9 @@ export const IPUC_PROJECT: ProjectInterface = {
 
 export const SAMAWE_PROJECT: ProjectInterface = {
   image: 'assets/images/SAMAWE.webp',
-  title: 'Samawé Eco Hotel – Sistema Web, Escritorio y Reservas',
+  title: 'Samawé Eco Hotel – Plataforma Multi-hotel, Facturación DIAN y Reservas',
   description:
-    'Sistema full-stack completo para el Eco Hotel Samawé, desde el levantamiento de requerimientos hasta el despliegue en producción. Más de un año como desarrollador de confianza del cliente, en tres fases: sistema contable con facturación electrónica ante la DIAN (entregado también como aplicación de escritorio con Electron), módulo de restaurante e inventario, y landing pública con SSR, multiidioma y reservas en línea.',
+    'Sistema full-stack completo para el Eco Hotel Samawé, desde el levantamiento de requerimientos hasta el despliegue en producción. Más de un año como desarrollador de confianza del cliente: sistema contable con facturación electrónica ante la DIAN (entregado también como aplicación de escritorio con Electron), restaurante e inventario, landing pública con SSR y reservas en línea. En octubre de 2026 lo convertí en una plataforma multi-hotel (multitenant): el mismo backend y el mismo panel atienden también al Motel Crazy Love, cada hotel como una organización separada con sus datos aislados, su dominio y su marca.',
   demoUrl: 'https://ecohotelsamawe.com/es',
   technologies: [
     'Angular',
@@ -262,11 +300,13 @@ export const SAMAWE_PROJECT: ProjectInterface = {
   role: 'Desarrollador Full Stack',
   features: [
     'Facturación electrónica DIAN con Factus: factura de venta, notas crédito y débito, documento soporte y nota de ajuste',
+    'Multitenant en producción: sirve a Samawé y a Crazy Love como organizaciones separadas, resueltas por dominio',
     'Reservas en línea: disponibilidad, confirmación de pago por el personal y liberación automática a las 24 h',
+    'Aislamiento entre hoteles: 84 rutas protegidas por propiedad, inserciones con hotel obligatorio y panel con la marca de cada organización',
     'Versión de escritorio con Electron para operar sin conexión',
     'Módulo de restaurante: menús, recetas, pedidos e inventario con reversión automática',
     'Ventas a crédito con plazos de 30, 60 y 90 días y registro de abonos',
-    'Landing multitenant con SSR, SEO técnico, i18n (español/inglés) y modo oscuro',
+    'Landing con SSR, SEO técnico, i18n (español/inglés) y modo oscuro',
     'Avisos en tiempo real con WebSockets y correos automáticos al huésped',
     'Panel administrativo con dashboard de ganancias y reportes en PDF y Excel',
     'Escalado horizontal con Redis: adaptador de Socket.IO y límite de peticiones compartido',
@@ -277,6 +317,7 @@ export const SAMAWE_PROJECT: ProjectInterface = {
   achievements: [
     'Proyecto en producción: ecohotelsamawe.com',
     'Facturación electrónica DIAN emitiendo en producción con Factus',
+    'Plataforma multi-hotel: un segundo hotel (Crazy Love) operando sobre el mismo sistema',
     'Vendí e implementé la solución al cliente final',
     'Más de un año de relación continua con el cliente',
     'Eliminó por completo el uso de hojas de cálculo manuales'
@@ -319,6 +360,7 @@ export const LACASADELPINTOR_PROJECT: ProjectInterface = {
 export const PROJECTS: ProjectInterface[] = [
   MANDALO_PROJECT,
   SAMAWE_PROJECT,
+  CRAZYLOVE_PROJECT,
   RANCHOPORVENIR_PROJECT,
   LACASADELPINTOR_PROJECT,
   CINECLUB_PROJECT,

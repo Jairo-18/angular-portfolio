@@ -121,10 +121,20 @@ Al actualizarlos, revisar ahí primero:
 - Habilidades: tarjeta nueva "Redes y Soporte" (`networkingTags`); React Native/Expo/NativeWind quedan solo en "Móvil";
   quitados `EAS Build` y `Firebase` duplicados de Infraestructura; Móvil suma módulos nativos, push, mapas y Sign in.
 
+### 21 oct 2026: CV nuevos, Crazy Love y multi-hotel
+- CV regenerados en `cv-actualizados/` (ES/EN, `.docx` + `.pdf`, 2 páginas) y guía `cv-actualizados/LINKEDIN.md`.
+  Los PDF de `src/assets/files/CV-ESPAÑOL.pdf` y `CV-English.pdf` se reemplazaron por los nuevos.
+- Nuevo proyecto **Motel Crazy Love** (`CRAZYLOVE_PROJECT`, tercero en `PROJECTS`): sitio Next.js 16 (`samawe/frontend-crazy-love`)
+  en `crazylove.ecohotelsamawe.com`, segunda organización del backend multi-hotel de Samawé. Imagen `CRAZYLOVE.webp` (captura del sitio).
+- **Samawé**: el multitenant ya está confirmado (contexto de samawe, 10–12 oct 2026: organizaciones separadas por dominio,
+  `@OwnedBy` en 84 rutas). Se quitó "Landing multitenant" y se describe la plataforma multi-hotel.
+- **Rancho Porvenir**: dominio definitivo `ranchoporvenirmocoa.com` (desde el 17 oct 2026).
+- Habilidades: `Next.js` (faltaba) y `Arquitectura multitenant`. Inicio: menciona la plataforma multi-hotel.
+
 ### ⚠️ Datos del portfolio que el contexto de samawe NO respalda
 - **Pasarela de pagos / integración con Booking y Airbnb**: el contexto dice que la pasarela "no existe; el pago es
   manual (transferencia + comprobante)" y que Booking.com quedó aplazado → **se quitaron**.
-- **Electron**, **multitenant**, "más de un año" (los repos actuales arrancan en feb 2026) y "eliminó las hojas de
+- **Electron**, "más de un año" (los repos actuales arrancan en feb 2026) y "eliminó las hojas de
   cálculo": no aparecen en la documentación ni en el código; se dejaron porque pueden venir de fases anteriores.
   Confirmar.
 

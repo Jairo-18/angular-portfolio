@@ -23,6 +23,7 @@ export class SkillsComponent {
     'Angular',
     'Angular SSR',
     'React',
+    'Next.js',
     'Astro',
     'HTML',
     'CSS',
@@ -62,6 +63,7 @@ export class SkillsComponent {
     'Socket.IO',
     'Redis',
     'Cron Jobs',
+    'Arquitectura multitenant',
     'Facturación electrónica DIAN (Factus)'
   ];
 
