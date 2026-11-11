@@ -20,3 +20,7 @@ npm run build   # dist/ con index.html, 404.html y _redirects
 ```
 
 El portafolio Angular de la raíz queda como archivo: ya no se publica.
+
+## `angular.json` vacío
+
+El sitio tiene instalado desde el panel de Netlify el plugin `@netlify/angular-runtime`, que falla si no encuentra un `angular.json`. `redirect/angular.json` (`{}`) existe solo para que el plugin lo encuentre, no vea `@angular/core` instalado y se salte ("Skipping build plugin"). No borrarlo mientras el plugin siga instalado.
