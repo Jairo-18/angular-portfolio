@@ -1,0 +1,18 @@
+# jhonlegardaportfolio.netlify.app ya no publica el portafolio Angular: solo
+# redirige a jairolegarda.tech (las tarjetas impresas tienen la URL vieja).
+# El proyecto que se publica es redirect/ (Astro). Este archivo manda sobre
+# lo que diga la configuración de build en el panel de Netlify.
+
+[build]
+  base = "redirect"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/*"
+  to = "https://jairolegarda.tech/:splat"
+  status = 301
+  force = true

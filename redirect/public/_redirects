@@ -1,0 +1,3 @@
+# Redirect permanente (301) de todo el sitio viejo al dominio nuevo,
+# conservando la ruta: /projects → https://jairolegarda.tech/projects
+/*  https://jairolegarda.tech/:splat  301!
